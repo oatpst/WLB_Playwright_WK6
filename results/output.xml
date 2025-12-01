@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-25T12:59:56.305303" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E Test" source="C:\Users\asus\Desktop\E2E Test">
+<suite id="s1-s1" name="UI" source="C:\Users\asus\Desktop\E2E Test\UI">
+<suite id="s1-s1-s1" name="SCK Shopping" source="C:\Users\asus\Desktop\E2E Test\UI\SCK_Shopping">
+<suite id="s1-s1-s1-s1" name="Sck Shopping Test-01" source="C:\Users\asus\Desktop\E2E Test\UI\SCK_Shopping\sck_shopping_test-01.robot">
+<test id="s1-s1-s1-s1-t1" name="หน้า Product lists" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-25T12:59:56.607727" level="INFO">Opening browser 'chrome' to base url 'http://152.42.225.130/product/list'.</msg>
+<arg>url=http://152.42.225.130/product/list</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-25T12:59:56.606979" elapsed="6.187375"/>
+</kw>
+<kw name="Page Should Contain Image" owner="SeleniumLibrary">
+<msg time="2025-11-25T13:00:02.818229" level="INFO">Current page contains image 'id=header-logo-image'.</msg>
+<arg>id=header-logo-image</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-11-25T13:00:02.795982" elapsed="0.022854"/>
+</kw>
+<kw name="Page Should Contain Button" owner="SeleniumLibrary">
+<msg time="2025-11-25T13:00:02.895900" level="INFO">Current page contains button 'id=header-menu-cart-btn'.</msg>
+<arg>id=header-menu-cart-btn</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-11-25T13:00:02.819262" elapsed="0.077454"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-25T13:00:03.034399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-25T13:00:03.034911" level="FAIL">Page should have contained text 'id=header-menu-login' but did not.</msg>
+<arg>id=header-menu-login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-11-25T13:00:02.897310" elapsed="0.151139">Page should have contained text 'id=header-menu-login' but did not.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=search-product-Input</arg>
+<arg>text=Balance Training Bicycle</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T13:00:03.049203" elapsed="0.000366"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>id=search-product-Input</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-11-25T13:00:03.050046" elapsed="0.000248"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Balance Training Bicycle</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-11-25T13:00:03.050657" elapsed="0.000205"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=product-card-name-1</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-25T13:00:03.051184" elapsed="0.000163"/>
+</kw>
+<status status="FAIL" start="2025-11-25T12:59:56.601686" elapsed="6.450215">Page should have contained text 'id=header-menu-login' but did not.</status>
+</test>
+<status status="FAIL" start="2025-11-25T12:59:56.359227" elapsed="6.716426"/>
+</suite>
+<status status="FAIL" start="2025-11-25T12:59:56.350150" elapsed="6.739865"/>
+</suite>
+<status status="FAIL" start="2025-11-25T12:59:56.344352" elapsed="6.753099"/>
+</suite>
+<status status="FAIL" start="2025-11-25T12:59:56.311683" elapsed="6.796620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="E2E Test" id="s1" pass="0" fail="1" skip="0">E2E Test</stat>
+<stat name="UI" id="s1-s1" pass="0" fail="1" skip="0">E2E Test.UI</stat>
+<stat name="SCK Shopping" id="s1-s1-s1" pass="0" fail="1" skip="0">E2E Test.UI.SCK Shopping</stat>
+<stat name="Sck Shopping Test-01" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">E2E Test.UI.SCK Shopping.Sck Shopping Test-01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

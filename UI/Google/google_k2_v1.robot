@@ -1,0 +1,33 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+
+${URL}    https://www.google.com
+${ฺBROWSER}    chrome
+
+*** Test Cases ***
+
+การค้นหาร้านอาหารด้วยการใช้ Keywords และตรวจสอบ URL
+    เข้าหน้าเว็บ และใส่คำค้นหา
+    #Open Browser    url={URL}   browser={BROWSER}
+    #Input Text    name=q    text=ร้านอาหารญี่ปุ่นใกล้ฉัน
+    #Press Keys    name=q    RETURN
+    ตรวจสอบผลการค้นหา
+    #Element Text Should Be    name=q    text=ร้านอาหารญี่ปุ่นใกล้ฉัน
+    #Page Should Contain    เท็นชิโนะ
+    #Page Should Contain Link    [TBD]
+
+*** Keywords ***
+
+เข้าหน้าเว็บ และใส่คำค้นหา
+
+    Open Browser    url={URL}    browser={BROWSER}
+    Input Text    name=q    text=ร้านอาหารญี่ปุ่นใกล้ฉัน
+    Press Keys    name=q    RETURN
+
+ตรวจสอบผลการค้นหา
+
+    Element Text Should Be    name=q    text=ร้านอาหารญี่ปุ่นใกล้ฉัน
+    Page Should Contain    เท็นชิโนะ
+    Page Should Contain Link    [TBD]
